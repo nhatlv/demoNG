@@ -1,8 +1,8 @@
 angular.module('App').controller('homeController', HomeController)
 
-HomeController.$inject = ['$scope','$http','configApp'];
+HomeController.$inject = ['$scope','$http','ENDPOINT'];
 
-function HomeController($scope,$http) {
+function HomeController($scope,$http,ENDPOINT) {
 
     $http.get('venue.json').success(function(data) {
         $scope.venues = data;
